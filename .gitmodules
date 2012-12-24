@@ -10,3 +10,6 @@
 [submodule "bundle/securemodelines"]
 	path = bundle/securemodelines
 	url = git://github.com/ciaranm/securemodelines.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git://github.com/ervandew/supertab.git
