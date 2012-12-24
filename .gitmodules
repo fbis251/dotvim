@@ -7,3 +7,6 @@
 [submodule "bundle/pyflakes"]
 	path = bundle/pyflakes
 	url = git://github.com/kevinw/pyflakes-vim.git
+[submodule "bundle/securemodelines"]
+	path = bundle/securemodelines
+	url = git://github.com/ciaranm/securemodelines.git
