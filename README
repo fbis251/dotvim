@@ -1,4 +1,4 @@
-Installation:
+# Installation:
     git clone git://github.com/fbis251/dotvim.git ~/.vim
     # Create symlinks
     ln -s ~/.vim/.vimrc ~/.vimrc
@@ -8,7 +8,13 @@ Installation:
     git submodule init
     git submodule update
 
-Keeping the plugins updated:
+# Keeping everything up to date:
+    # The easy way
     cd ~/.vim
+    ./update.sh
+
+    # The hard way (in which you have to memorize the commands)
+    cd ~/.vim
+    git pull
     git submodule foreach git pull origin master
 
