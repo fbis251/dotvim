@@ -6,6 +6,10 @@ echo "Updating main repository"
 git pull
 
 echo "Updating submodules"
+git submodule init
+git submodule update
+
+echo "Making sure each submodule is updated"
 git submodule foreach git pull origin master
 
 echo "Update completed"
