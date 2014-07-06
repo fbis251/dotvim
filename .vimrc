@@ -198,3 +198,8 @@ set nobackup
 if exists('+colorcolumn')
   set colorcolumn=80
 endif
+
+" indentLine settings
+let g:indentLine_char = '┆'
+let g:indentLine_color_term = 237       " Dark Gray
+let g:indentLine_color_gui = '#3A3A3A'  " Dark gray
