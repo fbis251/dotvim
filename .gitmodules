@@ -28,3 +28,6 @@
 [submodule "bundle/indentLine"]
 	path = bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine
+[submodule "bundle/dutyl"]
+	path = bundle/dutyl
+	url = https://github.com/idanarye/vim-dutyl.git
