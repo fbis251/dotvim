@@ -119,8 +119,9 @@ set ic
 " Higlhight search
 set hls
 
-" Molokai theme from TextMate
-colorscheme Monokai
+" Dark Paper Theme
+set background=dark
+colorscheme PaperColor
 
 " Add copy paste with ctrl + c/v
 " source $VIMRUNTIME/mswin.vim
