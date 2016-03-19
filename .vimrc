@@ -32,8 +32,8 @@ else
 endif
 
 set history=50      " keep 50 lines of command line history
-set ruler       " show the cursor position all the time
-set showcmd     " display incomplete commands
+set ruler           " show the cursor position all the time
+set showcmd         " display incomplete commands
 set incsearch       " do incremental searching
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
@@ -103,6 +103,8 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 FB's edits                                  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use an easier to reach Leader
+let mapleader="\<SPACE>"
 " Turn on line numbering. Turn it off with "set nonu"
 set nu
 
@@ -123,15 +125,6 @@ set hls
 set background=dark
 colorscheme PaperColor
 
-" Add copy paste with ctrl + c/v
-" source $VIMRUNTIME/mswin.vim
-
-" unblinking vertical bar as a cursor
-" set guicursor=a:ver1
-
-" pointer I-beam when over text
-" set mouseshape=n:beam,ve:beam,sd:updown
-
 " Use 4 spaces instead of a \t
 set tabstop=4
 set shiftwidth=4
@@ -139,7 +132,6 @@ set expandtab
 
 set modeline
 set modelines=5
-
 
 " Enable full color support in gnome-terminal
 if $COLORTERM == 'gnome-terminal'
@@ -204,3 +196,30 @@ endif
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 237       " Dark Gray
 let g:indentLine_color_gui = '#3A3A3A'  " Dark gray
+
+" Relative numbering
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set nornu
+    set number
+  else
+    set rnu
+  endif
+endfunction
+
+" Toggle between normal and relative numbering.
+nnoremap <leader>r :call NumberToggle()<cr>
+nnoremap ; :
+" Tell Vim which characters to show for expanded TABs,
+" trailing whitespace, and end-of-lines. VERY useful!
+if &listchars ==# 'eol:$'
+  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+endif
+set list                " Show problematic characters.
+
+" Also highlight all tabs and trailing whitespace characters.
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$\|\t/
+set gdefault            " Use 'g' flag by default with :s/foo/bar/.
+set magic               " Use 'magic' patterns (extended regular expressions).
+
