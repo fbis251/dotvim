@@ -6,10 +6,7 @@ echo "Updating main repository"
 git pull origin master
 
 echo "Updating submodules"
-git submodule init
-git submodule update
-
-echo "Making sure each submodule is updated"
-git submodule foreach git pull origin master
+git submodule update --init --recursive
+git pull --recurse-submodules
 
 echo "Update completed"
